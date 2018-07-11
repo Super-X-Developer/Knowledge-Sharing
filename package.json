@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "predeploy": "vuepress build docs && mv docs/.vuepress/dist blog",
+    "deploy": "scp -r blog/ root@47.97.196.157:/var/www/",
+    "postdeploy": "rm -rf blog"
+  }
+}
